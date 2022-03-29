@@ -1,0 +1,17 @@
+1. CREATE DATABASE book_store;
+
+2. CREATE TABLE books (id BIGSERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL, author VARCHAR(50) NOT NULL, price INTEGER NOT NULL, is_publish BOOLEAN NOT NULL DEFAULT FALSE);
+
+3. INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('The Intelligent Investor','Benjamin Graham',175500,true);
+   INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('Segala Galanya Amyar','Mark Manson',111000,false);
+   INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('Rich Dad Poor Dad','Robert T. Kiyosaki',54400,false);
+   INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('Novel Bulan','Tere Liye',76000,true);
+   INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('You Do You','Fellexandro Ruby',102400,true);
+   INSERT INTO BOOKS (name,author,price,is_publish) VALUES ('Start With Why','Simon Sinek',80000,false);
+
+4. SELECT name,author,price FROM BOOKS;
+5. SELECT * FROM BOOKS WHERE price >= 80000;
+6. SELECT * FROM BOOKS WHERE name LIKE 'Rich%';
+7. UPDATE BOOKS SET price=180000,is_publish=true WHERE author='Simon Sinek';
+8. DELETE FROM BOOKS WHERE name='Novel Bulan';
+9. SELECT * FROM BOOKS ORDER BY price DESC;
