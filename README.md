@@ -1,1 +1,1 @@
-# Binar-Quiz-2
+# Binar Quiz Chapter 6
